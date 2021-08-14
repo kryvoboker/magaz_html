@@ -327,6 +327,15 @@ $(function () {
 		swipeToSlide: true,
 		nextArrow: '<button type="button" class="slick-next main-reviews-next"></button>',
 		prevArrow: '<button type="button" class="slick-prev main-reviews-prev"></button>',
+
+		responsive: [{
+
+			breakpoint: 769,
+			settings: {
+				arrows: false
+			}
+
+		}]
 	});
 
 	document.querySelector('.header__phone-icon-phone').onclick = function () {
