@@ -269,6 +269,9 @@
 		transform: rotate(90deg);
 		transition: all .5s;
 	}
+	&__menu-item-btn::before {
+		right: 10px;
+	}
 	&__menu-sub-item-btn.rotate::before {
 		transform: rotate(180deg);
 	}
@@ -331,6 +334,7 @@
 		position: fixed;
 		min-height: $minHeight;
 		transition: all 1s;
+		z-index: 100;
 
 		& .header__menu-item {
 			padding-bottom: 0;
@@ -469,7 +473,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 45vw;
+		height: 40vw;
 	}
 }
 //====================================arrows of slider====================
@@ -992,6 +996,7 @@
 	}
 	&__sub-title {
 		font-size: 18px;
+		font-weight: 500;
 		transition: all .5s;
 	}
 }
@@ -1023,7 +1028,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 250px;
+		width: 240px;
 		border: 2px solid transparent;
 		text-align: center;
 		margin: 20px;
@@ -1279,6 +1284,9 @@
 		&:hover {
 			color: $blueHover;
 		}
+	}
+	&__contact-us-text:first-child {
+		line-height: 26px;
 	}
 	&__socials-list {
 		display: flex;

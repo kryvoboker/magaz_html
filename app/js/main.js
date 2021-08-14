@@ -139,6 +139,11 @@ function removeClasses(el, class_name) {
 	}
 }
 
+if (isMobile.any()) {
+	$('.main-list-cats .main-list__sub-title, ' +
+		'.main-sections .main-sections__item-title').css('color', '#fff');
+}
+
 //активный пункт главного меню
 $(function () {
 
