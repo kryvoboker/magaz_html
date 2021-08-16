@@ -1,0 +1,58 @@
+//====================================main-discounts======================
+.main-discounts {
+	& .container {
+		padding: 0;
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		background-color: rgba(0,0,0,0.8);
+		padding: 15px 20px;
+	}
+	&__item {
+		width: 210px;
+		height: 100%;
+		border: 3px solid transparent;
+		border-radius: 5px;
+		transition: all .5s;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 500;
+		margin: 15px 0 20px;
+	}
+	&__title--hot-yellow {
+		color: #ffb400;
+	}
+	&__title--green {
+		color: #68cd20;
+	}
+	&__title--light-red {
+		color: #fd6130;
+	}
+	&__title--pink {
+		color: #ff5b9d;
+	}
+	&__title--light-blue {
+		color: #26c0ff;
+	}
+	&__img {
+		width: 200px;
+		height: 230px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+	}
+	&__link {
+		width: 100%;
+		font-size: 16px;
+		background: royalblue;
+		border-radius: 5px;
+		padding: 15px 0px;
+		margin-bottom: 20px;
+		transition: all 1.5s;
+	}
+}
+//====================================main-discounts======================

@@ -1,0 +1,187 @@
+//====================================main-magnific-popup-ajax-type=======
+.main {
+	&-categories__slider-item-ajax {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	&-categories__slider-item-ajax::before {
+		position: absolute;
+		content: "\e911";
+		top: calc((28 * 200px) / 100);
+		left: 0;
+		right: 0;
+		width: 60px;
+		height: 60px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 50%;
+		font-family: 'icomoon';
+		font-size: 30px;
+		color: #0003f6;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		z-index: 10;
+		transform: scale(0);
+		transition: all .5s;
+	}
+}
+.product-ajax {
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+	&__row:first-child {
+		flex: 1 1 40%;
+		margin-right: 20px;
+	}
+	&__row:last-child {
+		flex: 1 1 60%;
+	}
+	&__title {
+		font-size: 30px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	&__rating {
+		position: relative;
+		width: 105px;
+		padding-bottom: 20px;
+		margin: 0 auto 20px auto;
+	}
+	&__rating-before::before,
+	&__rating-after::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-family: 'icomoon';
+		color: $blueColor;
+		font-size: 18px;
+		letter-spacing: 5px;
+	}
+	&__rating-before::before {
+		content: "\e90b \e90b \e90b \e90b \e90b";
+	}
+	&__rating-after::before {
+		content: "\e90c\e90c\e90c";
+	}
+	&__price-box {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	&__price {
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+	&__price--discount {
+		font-size: 30px;
+		font-weight: 600;
+		color: $blueColor;
+		margin-right: 10px;
+	}
+	&__price--default {
+		color: $greySliderArticle;
+		text-decoration: line-through;
+	}
+	&__about,
+	&__manufacturer,
+	&__label {
+		font-size: 15px;
+		line-height: 20px;
+		color: $blackAjaxPopup;
+		margin-bottom: 20px;
+	}
+	&__wrapper select {
+		width: 250px;
+		height: 40px;
+		font-family: inherit;
+		font-size: 20px;
+		font-weight: 500;
+		border-radius: 5px;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		@include background-img("../img/icons/triangle.png", no-repeat, top right);
+		background-size: 20% 100%;
+		background-color: #fff;
+		cursor: pointer;
+		padding: 0 5px;
+		margin-bottom: 30px;
+	}
+	&__wrapper .select__item {
+		width: 50%;
+	}
+	&__buttons {
+		display: flex;
+	}
+	&__buttons-quantity{
+		display: flex;
+		align-items: center;
+	}
+	&__buttons-label {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 26px;
+		margin-right: 10px;
+	}
+	&__buttons-input {
+		width: 50px;
+		height: 43px;
+		border: 1px solid #000;
+		font-size: 20px;
+		line-height: 1px;
+		text-align: center;
+		margin-right: 20px;
+	}
+	&__buttons-btns {
+		display: flex;
+		align-items: center;
+	}
+	&__buttons-cart {
+		font-size: 20px;
+		text-transform: uppercase;
+		background: $blueColor;
+		border-radius: 5px;
+		padding: 10px 20px;
+		margin-right: 20px;
+		transition: all .5s;
+
+		&:hover {
+			background: $blueHover;
+		}
+	}
+	&__buttons-wishes {
+		background: transparent;
+	}
+	&__buttons-wishes::before {
+		font-family: 'icomoon';
+		content: "\e902";
+		font-size: 45px;
+	}
+}
+.mfp-content {
+	display: inline-flex;
+	align-items: center;
+}
+.mfp-close-btn-in .mfp-close {
+	width: 40px;
+	height: 40px;
+	border: 4px solid #000;
+	border-radius: 50%;
+	background: #fff;
+	font-size: 40px;
+	line-height: 0;
+	color: #000;
+	top: -23px;
+	right: -23px;
+	transition: all 0.5s;
+	box-shadow: 0px 0px 2px 1px;
+	text-shadow: 0px 2px 0px #757371;
+}
+//====================================main-magnific-popup-ajax-type=======

@@ -1,0 +1,35 @@
+//====================================main-cat-breadcumb==================
+.breadcrumb {
+	&__list {
+		display: flex;
+	}
+	&__item {
+		position: relative;
+		background-color: #cecde3;
+		padding: 6px 16px;
+
+		&:not(:first-child) {
+			margin-left: 18px;
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: -13px;
+				border: 13px solid #cecde3;
+				border-left: 13px solid transparent;
+			}
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			top: 5px;
+			right: -9px;
+			width: 17px;
+			height: 17px;
+			transform: rotate(45deg);
+			background-color: #cecde3;
+		}
+	}
+}
+//====================================main-cat-breadcumb==================

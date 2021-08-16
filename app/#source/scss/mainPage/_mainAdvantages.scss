@@ -1,0 +1,66 @@
+//====================================main-advantages======================
+.main-advantages {
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		border: 2px solid $grey;
+		border-radius: 5px;
+		background-color: #fff;
+	}
+	&__item {
+		position: relative;
+		flex: 0 1 290px;
+		color: red;
+		border: 2px solid transparent;
+		padding-left:50px;
+		margin: 20px 10px;
+
+		&:hover {
+			border: 2px solid $blueColor;
+			border-radius: 5px;
+			.main-advantages__title {
+				color: $blueColor;
+			}
+		}
+	}
+	&__title {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-size: 15px;
+		// color: $grey;
+		color: red;
+	}
+	&__item--rocket::before,
+	&__item--quality::before,
+	&__item--wallet::before,
+	&__item--question::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-family: 'icomoon';
+		font-size: 30px;
+	}
+	&__item--rocket::before {
+		content: "\e908";
+	}
+	&__item--quality::before {
+		content: "\e920";
+	}
+	&__item--wallet::before {
+		content: "\e921";
+	}
+	&__item--question::before {
+		content: "\e905";
+	}
+	&__item--rocket:hover::before,
+	&__item--quality:hover::before,
+	&__item--wallet:hover::before,
+	&__item--question:hover::before {
+		color: $blueColor;
+	}
+}
+//====================================main-advantages======================

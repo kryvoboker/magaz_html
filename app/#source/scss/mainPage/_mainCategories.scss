@@ -1,0 +1,185 @@
+//====================================main-categories======================
+.main-categories {
+	&__inner {
+		border-radius: 15px;
+		background-color: #494d4e;
+		padding: 20px;
+	}
+	&__cat {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__cat-item {
+		background-color: $blueColor;
+		cursor: pointer;
+		transition: all .5s;
+		padding: 25px 50px;
+		margin-right: 10px;
+
+		&:not(:first-child) {
+		margin-left: 10px;
+		}
+		&:first-child {
+			padding: 25px 61px;
+		}
+		&.show {
+			background-color: $greyHover;
+		}
+	}
+}
+//====================================main-categories======================
+
+//====================================main-categories-slider===============
+.main-categories {
+	&__slider-box {
+		position: fixed;
+		top: 1000%;
+		left: 1000%;
+		opacity: 0;
+		width: 1200px;
+		max-width: 100%;
+	}
+	&__slider-box.visible {
+		position: static;
+		top: auto;
+		left: auto;
+		width: 100%;
+		border: 2px solid $grey;
+		border-radius: 5px;
+		opacity: 1;
+		margin: 0 auto;
+	}
+	&__slider-item {
+		position: relative;
+		height: 100%;
+		border: 3px solid silver;
+		border-radius: 5px;
+		background: #fff;
+		padding: 5px;
+		margin: 10px 10px;
+		
+		&:hover {
+			border: 3px solid $blueColor;
+		}
+	}
+	&__slider-item-link {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+	&__tags {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+	&__tag-sale {
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 12px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		color: #fff;
+		background-color: #86b52d;
+		padding: 10px 20px;
+	}
+	& .second .main-categories__tag-sale {
+		background-color: #ff960c;
+	}
+	& .third .main-categories__tag-sale {
+		background-color: rgb(219, 27, 27);
+	}
+	&__slider-item-img {
+		width: 150px;
+		height: 200px;
+		padding: 0 0px 10px;
+		margin: 0 auto;
+	}
+	&__slider-item-element-article,
+	&__slider-item-price {
+		font-size: 12px;
+		line-height: 12px;
+		color: $greySliderArticle;
+		margin-bottom: 10px;
+	}
+	&__slider-item-element-title {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 18px;
+		margin-bottom: 40px;
+	}
+	&__slider-item-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__slider-item-price {
+		font-weight: 500;
+		text-decoration: line-through;
+		margin-bottom: 5px;
+	}
+	&__slider-item-discount-price {
+		font-size: 18px;
+		font-weight: 500;
+	}
+	&__slider-item-elem-right {
+		z-index: 100;
+		margin-top: 6px;
+
+		& button {
+			background: transparent;
+			margin-bottom: 15px;
+		}
+	}
+	&__slider-item-btn::before {
+		content: "\e901";
+		font-family: 'icomoon';
+		font-size: 18px;
+		border: 1px solid #000;
+		border-radius: 5px;
+		padding: 5px 15px;
+		transition: color .5s;
+	}
+	&__slider-item-btn:hover::before {
+		color: $blueHover;
+		border-color: $blueHover;
+	}
+	&-next,
+	&-prev {
+		position: absolute;
+		top: -96px;
+		background: transparent;
+		z-index: 10;
+	}
+	&-next {
+		right: 0%;
+	}
+	&-prev {
+		right: 6%;
+	}
+	&-next::before,
+	&-prev::before {
+		font-family: 'icomoon';
+		font-size: 40px;
+		border-radius: 5%;
+		background-color: $grey;
+		transition: background-color .3s;
+		padding: 0 25px;
+	}
+	&-next:hover:before,
+	&-prev:hover:before {
+		background-color: $greyHover;
+	}
+	&-next::before {
+		content: "\e907";
+		margin-left: 10px;
+	}
+	&-prev::before {
+		content: "\e906";
+		margin-right: 10px;
+	}
+}
+//====================================main-categories-slider==============

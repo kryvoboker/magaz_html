@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
+const fileinclude = require('gulp-file-include');
 
 function browsersync() {
 	browserSync.init({
@@ -24,7 +25,6 @@ function cleanDist() {
 }
 
 function images() {
-	// return src('app/img/**/*', { base: 'app' })
 	return src('app/temp_convert/**/*')
 		.pipe(imagemin([
 			imagemin.gifsicle({ interlaced: true }),
@@ -53,26 +53,16 @@ function scripts() {
 		// 'app/js/select.js',
 		'app/js/main.js'
 	])
+		.pipe(fileinclude(
+			{
+				prefix: '@@',
+				basepath: '@file'
+			}))
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(dest('app/js'))
 		.pipe(browserSync.stream())
 }
-
-// function scripts() {
-// 	return src([
-// 		'node_modules/jquery/dist/jquery.js',
-// 		'app/pages/js/jquery.fancybox.min.js',
-// 		'app/pages/js/imagesLoaded.min.js',
-// 		'app/pages/js/masonry.min.js',
-// 		'app/pages/js/select.js',
-// 		'app/pages/js/main.js'
-// 	])
-// 		.pipe(concat('main.min.js'))
-// 		.pipe(uglify())
-// 		.pipe(dest('app/pages/js'))
-// 		.pipe(browserSync.stream())
-// }
 
 function styles() {
 	return src('app/#source/scss/style.scss')
@@ -85,18 +75,6 @@ function styles() {
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
-
-// function styles() {
-// 	return src('app/pages/#source/scss/style.scss')
-// 		.pipe(scss({ outputStyle: 'compressed' }))
-// 		.pipe(concat('style.css'))
-// 		.pipe(autoprefixer({
-// 			overrideBrowserslist: ['last 10 version'],
-// 			grid: true
-// 		}))
-// 		.pipe(dest('app/pages/css'))
-// 		.pipe(browserSync.stream())
-// }
 
 function CSSmini() {
 	return src([
@@ -119,18 +97,6 @@ function concatCSS() {
 		.pipe(browserSync.stream())
 }
 
-// function concatCSS() {
-// 	return src([
-// 		// 'app/pages/css/fonts.min.css',
-// 		'app/pages/css/jquery.fancybox.min.css',
-// 		// 'app/pages/css/select.min.css',
-// 		'app/pages/css/style.css'
-// 	])
-// 		.pipe(concat('style.min.css'))
-// 		.pipe(dest('app/pages/css'))
-// 		.pipe(browserSync.stream())
-// }
-
 function build() {
 	return src([
 		'app/pages/css/style.min.css',
@@ -144,11 +110,7 @@ function build() {
 
 function watching() {
 	watch(['app/#source/scss/**/*.scss'], styles);
-	// watch(['app/pages/#source/scss/**/*.scss'], styles);
-	// watch(['app/css/**/*.css', '!app/css/style.min.css'], concatCSS);
-	// watch(['app/pages/css/**/*.css', '!app/pages/css/style.min.css'], concatCSS);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-	// watch(['app/pages/js/**/*.js', '!app/pages/js/main.min.js'], scripts);
 	watch(['app/*.html']).on('change', browserSync.reload);
 }
 

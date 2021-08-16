@@ -1,0 +1,110 @@
+//====================================main-sale-timer======================
+.main-sale-timer {
+	&__date {
+		display: none;
+	}
+	& .main-sections__inner {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background-color: #494d4e;
+		padding: 30px 20px;
+	}
+	&__row:first-child {
+		flex: 0 1 20%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-right: 10px;
+	}
+	&__row:last-child {
+		flex: 0 1 80%;
+	}
+	&__sale {
+		text-align: center;
+	}
+	&__text:first-child {
+		font-size: 40px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 30px 0 65px;
+	}
+	&__text:last-child {
+		font-size: 90px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+	& .main-sections__box {
+		background-color: #494d4e;
+	}
+	&__clock {
+		margin-bottom: 30px;
+	}
+	& .flip-clock .flip-clock-group .flip-clock-label {
+		font-size: 14px;
+		color: #fff;
+	}
+	& .flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .top,
+	& .flip-clock .flip-clock-group .flip-clock-list .flip-clock-list-item-inner > .bottom {
+		font-size: 34px;
+ 	}
+	& .flip-clock .flip-clock-group .flip-clock-list {
+	 width: 25px;
+	 height: 45px;
+
+		&:not(:first-child) {
+			margin: 0;
+		}
+	}
+	& .flip-clock .flip-clock-group:first-child {
+		.flip-clock-list:nth-child(3) {
+			margin: 0;
+			margin-left: .333em;
+		}
+	}
+	& .flip-clock .flip-clock-divider {
+	 width: 15px;
+	 height: 45px;
+	}
+	& .flip-clock .flip-clock-divider:before, 
+	 .flip-clock .flip-clock-divider:after {
+	 width: 7px;
+	 height: 7px;
+	}
+	& .main-sections__item {
+		width: 230px;
+		border: none;
+
+		border-radius: 0px;
+
+		background-color: #fff;
+		
+		padding: 10px;
+		margin: 5px;
+	}
+	& .main-sections__item-img {
+		width: 170px;
+		height: 200px;
+		border-radius: 15px;
+		margin: 15px 0 25px;
+		transition: all .5s;
+	}
+	& .product-ajax__price-box {
+		justify-content: center;
+	}
+	& .product-ajax__buttons-cart {
+		margin-right: 0;
+	}
+	& .product-ajax__rating-before::before {
+		left: 0;
+	}
+	& .product-ajax__rating-after::before {
+		left: 0;
+	}
+}
+//====================================main-sale-timer======================
